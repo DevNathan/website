@@ -34,7 +34,7 @@
 					<div class = "github">
 						<a href= "https://www.github.com/DevNathan" alt="Page github de DevNathan"><img src= "source/github_logo.png"  alt="Logo de github"></a>
 					</div>
-					<div class = "appStore" onclick="myFunction()">
+					<div class = "appStore" onclick="popUp()">
 						<a href= "#" alt="Page app store de DevNathan"><img src= "source/app_store_logo.png"  alt="Logo de l'app store" ></a>
 					</div>
 					<div class = "keybase">
@@ -46,7 +46,7 @@
 					</div>
 					<script>
 						// When the user clicks on <div>, open the popup
-						function myFunction() {
+						function popUp() {
 							alert("This page doesn't exist yet !");
 						}
 						</script>
@@ -144,14 +144,28 @@
 			<article id="Projets">
 				<h2>Mes projets</h2>
 				<div class="container">
-					<div class = "a2l">
-						<p class="title">Site web et applications de l'A2L</p>
-						<p class="description">Un site web, une application iOS et un serveur programmés par mes soins pour l'association du lycée Jean Lurçat (A2L) afin de donner un compte à tous les adhérents et permettre de gérer en autre, les points de fidélités issues des ventes et la création de cartes des adhérents.<br/><br/>Tout le projet est open source, mais n'est plus déployé.</p>
-						
-					</div>
-					<div class = "iLocked">
+					
+					<div class = "projet_box projet_div iLocked">
 						<p class="title">iLocked</p>
-						<p class="description">iLocked est une application iOS qui permet à quiconque de chiffrer asymétriquement tout message avec RSA (4096 par défaut).<br/>Le but est de donné à tout le monde une solution simple et sûr de protéger sa vie privée particulièrement lors de l'envoie de messages confidentiels via des messageries classiques (Messenger, WhatsApp, iMessage ...).<br/> L'application se veut efficace, sûre, simple d'utilisation et accessible à tous.</p>
+						<p class="description">iLocked est une application iOS qui a pour but de donner à tout le monde une solution simple et sûre de protéger sa vie privée.<br/><br/></p>
+
+						<span class= "descriptionTitle">Objectifs :</span>
+					<ul>
+						<li>Envoyer des informations privées comme un <span style="font-style: italic; font-weight: bold;">mot de passe, un carte bleue, identifiant, ...</span> via <span style="text-decoration: underline;">n'importe quelle messagerie</span> ! </li>
+						<br/>
+						<li>Pas besoin d'utiliser une nouvelle messagerie.</li>
+						<br/>
+						<li>Seul votre visage/doigts/code peut déchiffrer ce que vous avez reçu</li>
+						<br/>
+						<li><span style="font-weight: bold;">Personne</span> à part vous ne peut lire le contenu de messages chiffré pour vous <span style="font-style: italic;">(Ni iLocked, ni la messagerie, personne autour de vous)</span></li>
+					</ul> <br/><br/>
+					<span class="descriptionTitle">À propos de l'app :</span>
+					<ul>
+						<li><span style="font-weight: bold;">Simple d'utilisation</span>. Aucune connaissance n'est requise.</li>
+						<br/>
+						<li>Chiffrement avec RSA 4096, une méthode un <span style="font-weight: bold;">très haut standard de sécurité</span>, inviolable.</li>
+						
+					</ul>
 						 <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -199,12 +213,69 @@
 		dots[slideIndex-1].className += " w3-white";
 	  }
 	  </script>
-
-  </div> 
+<div class="link_container">
+	<div>
+		<p><a href = "https://en.tipeee.com/devnathan" alt="Mon compte tipeee">Tipeee</a></p>
+	</div>
+	<div onclick="popUp()">
+		<p><a href="" alt="La page App Store de iLocked">App Store</a></p>
+	</div>
+</div>
+				  </div> 
+				  <div class = "projet_div leftContainer1">
+					<div class = " projet_box a2l" >
+						<p class="title">Site web et applications de l'A2L</p>
+						<p class="description">Un site web, une application iOS et un serveur programmés par mes soins pour l'association du lycée Jean Lurçat (A2L) afin de donner un compte à tous les adhérents et permettre de gérer en autre, les points de fidélités issues des ventes et la création de cartes des adhérents.<br/><br/>Tout le projet est open source, mais n'est plus déployé.</p>
+						<div class="link_container">
+							<div>
+								<p><a href= "https://github.com/DevNathan/A2L_BackEnd" alt="Github du serveur de l'A2L">Github (Serveur)</a></p>
+							</div>
+							<div>
+								<p><a href= "https://github.com/DevNathan/A2L_iOSApplication" alt="Github de l'app iOS de l'A2L">Github (iOS)</a></p>
+							</div>
+							<div>
+								<p><a href= "https://github.com/DevNathan/A2L_siteWeb" alt="Github du site web de l'A2L">Github (Web)</a></p>
+							</div>
+						</div>
 					</div>
+					<div class = "projet_box swiftyRSA">
+						<p class="title">SwiftyRSA</p>
+						<p class="description">Contributions au package <a href= "https://github.com/DevNathan/SwiftyRSA" alt="Github de SwiftyRSA">SwiftyRSA</a>, principale ressource gérant le chiffrement RSA en Swift, avec notamment l'ajout du <a href= "https://github.com/TakeScoop/SwiftyRSA/pull/215" alt="Pull request concernant le support du certificat">support des certificats X.509</a> pour les clés publiques.</p>
+						<div class="link_container">
+							<div>
+								<p> <a href= "https://github.com/DevNathan/SwiftyRSA" alt="Github de SwiftyRSA">Github</a></p>
+							</div>
+						</div>
+					</div>
+					<div class = "projet_box xss">
+						<p class="title">Faille XSS dans Mon Bureau Numérique</p>
+						<p class="description">Découverte d'une faille de sécurité (XSS) au sein du tout nouveau site de l'éducation nationale,  <a href= "https://monbureaunumerique.com" alt="Github de SwiftyRSA">Mon Bureau Numérique</a>, en septembre 2018.<br/> Aucune réponse n'a été donnée, et la faille est toujours exploitable.</p>
+						<div class="link_container">
+							<div>
+							<p><a href="https://teleservices.ac-nancy-metz.fr/login/ct_logon_vk.jsp?CTLoginErrorMsg=Bonjour!%20Je%20vous%20trouve%20fort%20courageux%20d%27avoir%20cliqu%C3%A9%20sur%20ce%20lien.%20Enfin%20bref%20comme%20vous%20pouvez%20le%20constater%20c%27est%20assez%20critique%20et%20personne%20ne%20fait%20rien%20;)%20%3CNathDev/%3E&CT_ORIG_URL=http%3A%2F%2Fteleservices.ac-nancy-metz.fr%2Fsso%2FSSO%3FSPEntityID%3DSP-MonBureauNumerique-Production" alt="Démo de l'exploitation de la faille xss">Démo</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
 				</div>
 			</article>
 		</section>
 	</body>
-	<br/><br/><br/><br/>
+	<br/><br/><br/>
+	<div class = "line"></div>
+	<footer><div class = "logoContainer">
+		<div class = "github">
+			<a href= "https://www.github.com/DevNathan" alt="Page github de DevNathan"><img src= "source/github_logo.png"  alt="Logo de github"></a>
+		</div>
+		<div class = "appStore" onclick="popUp()">
+			<a href= "#" alt="Page app store de DevNathan"><img src= "source/app_store_logo.png"  alt="Logo de l'app store" ></a>
+		</div>
+		<div class = "keybase">
+			<a href= "https://keybase.io/DevNathan" alt="Page keybase de DevNathan"><img src= "source/keybase_logo.png"  alt="Logo de keybase" ></a>
+		</div>
+		<div class = "mail">
+			<a href= "mailto:nathanstchepinsky@gmail.com" alt="Envoyer un email à Nathan"><img src= "source/email_logo.png"  alt="Un arobase" ></a>
+		</div>
+		</div><br/><br/><br/></footer>
+		
 </html>

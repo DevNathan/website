@@ -75,7 +75,7 @@ section
 #Presentation .text
 {
     position: static;
-    text-align: .left;
+    text-align: left;
 }
 
 
@@ -115,18 +115,18 @@ section
 }
 }
 
-#Presentation .logoContainer
+.logoContainer
 {
     display: flex;
 }
 
-#Presentation .logoContainer div
+.logoContainer div
 {
     margin-left: 5px;
     margin-right:5px;
 }
 
-#Presentation .logoContainer img
+.logoContainer img
 {
     max-width: 80px;
 }
@@ -166,39 +166,85 @@ h2
 #Projets .container
 {
     display: flex;
-    display: flex;
-    justify-content: space-around;
+    align-content: flex-start;
+    align-items : flex-start;
+    flex-wrap: wrap;
 }
 
-.a2l, .iLocked
+#Projets .leftContainer1
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projet_div
+{
+    width: 47%;
+}
+
+.projet_box
 {
     padding : 20px;
     border-radius: 20px;
     color:black;
-    flex:1;
     margin: 10px;
 }
 
-#Projets .container div:hover 
-{
-    
-    box-shadow: none;
-}
 
 .a2l
 {
-    box-shadow: 4px 4px 10px gray;
-    background: rgba(232,232,253);
-    border : 3px solid rgba(9,28,245);
+    box-shadow: 1px 1px 8px gray;
+    background: r/gba(232,232,253);
+    border-left : 3px solid rgba(9,28,245);
+    border-bottom  : 3px solid rgba(9,28,245);
+}
+
+.a2l .title
+{
+    color:rgba(9,28,245);
 }
 
 .iLocked
 {
-    box-shadow: 4px 4px 10px gray;
-    background: rgba(251,233,232);
-    border : 3px solid rgba(235,51,35);
+    box-shadow: 1px 1px 8px  gray;
+    background: rgb/a(251,233,232);
+    border-left : 3px solid rgba(235,51,35);
+    border-bottom : 3px solid rgba(235,51,35);
+    
 }
 
+.iLocked .title
+{
+    color:rgba(235,51,35);
+}
+
+.swiftyRSA
+{
+    box-shadow: 1px 1px 8px  gray;
+    background: rgb/a(240,134,56);
+    border-left : 3px solid rgba(240,134,56);
+    border-bottom : 3px solid rgba(240,134,56);
+}
+ 
+.swiftyRSA .title
+{
+    color: rgba(240,134,56);
+}
+
+
+.xss
+{
+    box-shadow: 1px 1px 8px  gray;
+    background: rgb/a(240,134,56);
+    border-left : 3px solid rgba(162,50,68);
+    border-bottom : 3px solid rgba(162,50,68);
+}
+ 
+.xss .title
+{
+    color: rgba(162,50,68);
+}
 
 #Projets .container .title
 {
@@ -206,17 +252,30 @@ h2
     font-size: 1.5em;
 }
 
+#Projets ul
+{
+    font-family: Hack,Arial;
+}
+
 #Projets .container .description
 {
     font-size: 1em;
     
 }
+
+#Projets .descriptionTitle{
+    font-weight: bold; color:rgba(235,51,35); 
+    text-decoration: underline;
+    font-family: Hack,Arial;
+    font-size:1.1em;
+}
+
 @media only screen and (max-device-width: 480px) {
     #Projets .container .title
 {
     font-size: 3em;
 }
-    #Projets .container .description
+    #Projets .container .description, #Projets ul
 {
     font-size: 2em;
     
@@ -224,8 +283,25 @@ h2
     #Projets .container
     {
         flex-direction: column;
-    justify-content: center;
+        justify-content: center;
     }
+    
+    #Projets .iLocked, .a2l
+    {
+        border-width: 5px;
+    }
+    .projet_div
+{
+    width: 100%;
+}
+    #Projets .iLocked
+    {
+        position :0;
+    }
+    #Projets .descriptionTitle{
+    font-size:2.1em;
+}
+    
 }
 
 
@@ -361,3 +437,69 @@ h2
         font-size:3em;
     }
 }
+
+.link_container
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.link_container p
+{
+    font-weight: bold;
+    border-radius: 10px;
+    border : 2px solid;
+    padding : 5px;
+    margin:5px;
+    color:white;
+    box-shadow: 4px 4px 8px lightgray;
+}
+
+.link_container a
+{
+    color:white;
+}
+
+.swiftyRSA .link_container p
+{
+    border-color: rgba(240,134,56);
+    background: rgba(240,134,56);
+}
+
+
+.iLocked .link_container p
+{
+    border-color: rgba(235,51,35);
+    background: rgba(235,51,35);
+}
+
+.a2l .link_container p
+{
+    border-color: rgba(9,28,245);
+    background: rgba(9,28,245);
+}
+
+.xss .link_container p
+{
+    border-color: rgba(162,50,68);
+    background: rgba(162,50,68);
+}
+
+@media only screen and (max-device-width: 480px) {
+    .link_container p
+    {
+         font-size: 2.5em;
+    }
+}
+
+footer .logoContainer
+{
+    justify-content: space-around;
+}
+
+
+
+
